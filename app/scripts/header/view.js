@@ -3,12 +3,16 @@ define([
     'underscore',
     'backbone',
     'text!header/template.html'
-], function($, _, Backbone, tpl){
+], function($, _, Backbone, Template){
     'use strict';
     var HeaderView = Backbone.View.extend({
-        template: tpl,
+        template: Template,
         
         el: 'header',
+
+        initialize: function(){
+            this.render();
+        },
 
         render: function () {
             $(this.el).html(_.template(this.template));

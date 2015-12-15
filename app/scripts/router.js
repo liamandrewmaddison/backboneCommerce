@@ -3,7 +3,6 @@ define([
     'underscore',
     'backbone',
     //views
-    'header/header'
 ], function($, _, Backbone, HeaderView){
     'use strict';
     var AppRouter = Backbone.Router.extend({
@@ -16,8 +15,6 @@ define([
         var appRouter = new AppRouter();
         //home route
         appRouter.on('route:homepage', function() {
-            var headerView = new HeaderView();
-            headerView.render();
             console.log(moltin);
         });
         Backbone.history.start();
