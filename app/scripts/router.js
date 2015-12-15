@@ -3,6 +3,7 @@ define([
     'underscore',
     'backbone',
 ], function($, _, Backbone){
+    'use strict';
     var AppRouter = Backbone.Router.extend({
         routes: {
             ''          : 'homepage',
@@ -10,10 +11,12 @@ define([
         }
     });
     var initialize = function(moltin){
-        var appRouter = new AppRouter;
+        var appRouter = new AppRouter();
         //home route
         appRouter.on('route:homepage', function() {
-            alert('yo');
+            moltin.Product.List({category: 'featured'}, function(product) {
+                console.log(product);
+            });
         });
         Backbone.history.start();
     };

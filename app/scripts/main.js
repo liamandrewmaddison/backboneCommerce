@@ -11,6 +11,7 @@ require([
 	'moltin',
 	'app',
 ], function(moltin, App){
+    'use strict';
 	//authenticating moltin
     moltin = new Moltin({ publicId: 'eXT0y3fLzXSoqSDW44AsA1y12CZKFEqELXWKN5IK' });
     moltin.Authenticate(function () {
