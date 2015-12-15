@@ -1,11 +1,10 @@
 node_modules
 dist
-test/temp
 .sass-cache
 app/bower_components
 .tmp
-test/bower_components/
 .jshintrc
 .gitattributes
 .editorconfig
-test
+*test
+*.DS_Store

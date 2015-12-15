@@ -2,7 +2,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-], function($, _, Backbone){
+    //views
+    'header/header'
+], function($, _, Backbone, HeaderView){
     'use strict';
     var AppRouter = Backbone.Router.extend({
         routes: {
@@ -14,9 +16,9 @@ define([
         var appRouter = new AppRouter();
         //home route
         appRouter.on('route:homepage', function() {
-            moltin.Product.List({category: 'featured'}, function(product) {
-                console.log(product);
-            });
+            var headerView = new HeaderView();
+            headerView.render();
+            console.log(moltin);
         });
         Backbone.history.start();
     };
