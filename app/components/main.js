@@ -12,15 +12,12 @@ require([
 	'app',
     //main views
     'header/view',
-    'footer/view',
-    'index/view'
-], function(moltin, App, HeaderView, FooterView, IndexView){
+    'footer/view'
+], function(moltin, App, HeaderView, FooterView){
     'use strict';
     //initializing every main view
-    //renders view 
-    new HeaderView();
-    new IndexView();
-    new FooterView();
+    new HeaderView();//render happens on init
+    new FooterView();// ""
 	//authenticating moltin
     moltin = new Moltin({ publicId: 'eXT0y3fLzXSoqSDW44AsA1y12CZKFEqELXWKN5IK' });
     moltin.Authenticate(function () {

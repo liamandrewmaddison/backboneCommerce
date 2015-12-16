@@ -2,7 +2,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-], function($, _, Backbone){
+    //views
+    'index/view'
+], function($, _, Backbone, IndexView){
     'use strict';
     var AppRouter = Backbone.Router.extend({
         routes: {
@@ -15,6 +17,7 @@ define([
         //home route
         appRouter.on('route:homepage', function() {
             console.log(moltin);
+            new IndexView();
         });
         //404 route
         appRouter.on('route:404', function(actions){

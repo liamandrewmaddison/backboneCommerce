@@ -1,11 +1,19 @@
 @import 'mixins.less';
 html,
 body{
-	height: 100%;
 	font-family: 'Montserrat';
 }
 body{
 	padding: 0;
 	margin: 0;
 	font-size: @font-base;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+i{
+	&:first-child{
+		margin-right: @spacing-small;
+	}
 }

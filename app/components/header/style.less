@@ -1,7 +1,17 @@
 @import '../../styles/mixins.less';
+.logo{
+    float: left;
+    padding: 15px;
+    line-height: 0;
+    img{
+    	width: 55px;
+    }
+}
 header{
-	background: #ddd;
+	background: #000;
 	width: 100%;
+	//mixin calls
+	.clearfix();
 	ul{
 		display: block;
 		margin: 0;
@@ -13,8 +23,17 @@ header{
 			float: left;
 			a{
 				display: block;
+				color: #fff;
 				padding: @spacing-base;
+				text-decoration: none;
+				&:hover{
+					background: #fff;
+					color: #000;
+				}
 			}
-		} 
+		}
+		&.right{
+			float: right;
+		}
 	}
 }
