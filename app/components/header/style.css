@@ -1,1 +1,1 @@
-header{padding:15px;background:#ddd;width:100%}header:after{content:'';display:block;clear:both}header ul{padding:0;margin:0;list-style:none}header ul li{float:left}header ul li a{padding:15px}
+header{background:#ddd;width:100%}header ul{display:block;padding:15px;margin:0;list-style:none}header ul:after{content:'';display:block;clear:both}header ul li{float:left}header ul li a{padding:15px}

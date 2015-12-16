@@ -16,6 +16,7 @@ define([
         appRouter.on('route:homepage', function() {
             console.log(moltin);
         });
+        //404 route
         appRouter.on('route:404', function(actions){
             alert(actions);
         });

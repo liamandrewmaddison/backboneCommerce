@@ -1,14 +1,14 @@
 @import '../../styles/mixins.less';
 header{
-	padding: @spacing-base;
 	background: #ddd;
 	width: 100%;
-	//mixin calls
-	.clearfix();
 	ul{
-		padding: 0;
+		display: block;
+		padding: @spacing-base;
 		margin: 0;
 		list-style: none;
+		//mixin calls
+		.clearfix();
 		li{
 			float: left;
 			a{
