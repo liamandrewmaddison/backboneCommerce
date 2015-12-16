@@ -2,13 +2,12 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    //views
-], function($, _, Backbone, HeaderView){
+], function($, _, Backbone){
     'use strict';
     var AppRouter = Backbone.Router.extend({
         routes: {
             ''          : 'homepage',
-            '*actions'  : 'defaultAction'
+            '*actions'  : '404'
         }
     });
     var initialize = function(moltin){
@@ -16,6 +15,9 @@ define([
         //home route
         appRouter.on('route:homepage', function() {
             console.log(moltin);
+        });
+        appRouter.on('route:404', function(actions){
+            alert(actions);
         });
         Backbone.history.start();
     };

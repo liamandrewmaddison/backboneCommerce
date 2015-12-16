@@ -1,0 +1,19 @@
+@import '../../styles/mixins.less';
+header{
+	padding: @spacing-base;
+	background: #ddd;
+	width: 100%;
+	//mixin calls
+	.clearfix();
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		li{
+			float: left;
+			a{
+				padding: @spacing-base;
+			}
+		} 
+	}
+}

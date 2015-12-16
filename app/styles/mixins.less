@@ -1,4 +1,26 @@
 //-- colours --//
+@color-primary	 : '';
+@color-secondary : '';
+@color-border	 : '';
+@color-grey		 : '';
+@color-link		 : '';
 
 //-- spacing --//
+@spacing-small	: 5px;
+@spacing-base	: 15px;
+@spacing-large	: 30px;
 
+//-- font sizes --//
+@font-small : 11px;
+@font-base	: 14px;
+@font-large : 18px;
+@font-xxl	: 24px;
+
+//-- mixins --//
+.clearfix(){
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}

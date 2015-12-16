@@ -10,10 +10,12 @@ define([
 ], function($, _, Backbone, Router, HeaderView, FooterView){
     'use strict';
     var initialize = function(moltin){
-        Router.initialize(moltin);
+        //initializing every necessary component for index
         //renders view 
         new HeaderView();
         new FooterView();
+        //router init
+        Router.initialize(moltin);
     };
     return {
         initialize: initialize

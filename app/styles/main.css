@@ -1,1 +1,1 @@
-body,html{height:100%}body{padding:0;margin:0}header{padding:15px;background:#ddd}header ul{padding:0;margin:0;list-style:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}header ul li a{padding:15px}footer{padding:15px;background:#ddd}
+body,html{height:100%}body{padding:0;margin:0}header{padding:15px;background:#ddd;width:100%}header:after{content:'';display:block;clear:both}header ul{padding:0;margin:0;list-style:none}header ul li{float:left}header ul li a{padding:15px}footer{padding:15px;background:#ddd}
