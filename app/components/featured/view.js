@@ -2,7 +2,7 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!featured/template.ejs',
+    'text!featured/template.html',
     'featured/model',
     'featured/collection'
 ], function($, _, Backbone, Template, FeaturedModel, FeaturedCollection){
@@ -45,7 +45,7 @@ define([
         },
 
         render: function (rendered) {
-            var template = _.template($(Template).html(), {rendered: rendered.models})
+            var template = _.template($(Template).html(), {rendered: rendered.models});
             $(this.el).html(template);
         },
     });
