@@ -16,6 +16,14 @@ define([
 
         render: function () {
             $(this.el).html(_.template(this.template));
+            var $this = this;
+            $(document).on('scroll', function(){
+                if($(document).scrollTop() > 0){
+                    $($this.el).addClass('menu--fixed');
+                }else{
+                    $($this.el).removeClass('menu--fixed');
+                }
+            });
         },
     });
     return HeaderView;

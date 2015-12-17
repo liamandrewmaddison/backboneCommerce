@@ -1,18 +1,20 @@
 @import '../../styles/mixins.less';
-.logo{
-    float: left;
-    padding: 15px;
-    line-height: 0;
-    img{
-    	width: 55px;
-    }
-}
-header{
-	background: #000;
+.menu{
+	background: transparent;
 	width: 100%;
+	position: fixed;
+	transition: background .25s ease;
 	//mixin calls
 	.clearfix();
-	ul{
+	.logo{
+		float: left;
+		background: url(/images/logo--black.png) 15px no-repeat;
+		background-size: 67px;
+		height: 48px;
+		width: 98px;
+		text-indent: -9999px;
+	}
+	&__ul{
 		display: block;
 		margin: 0;
 		padding: 0;
@@ -23,17 +25,34 @@ header{
 			float: left;
 			a{
 				display: block;
-				color: #fff;
+				color: #000;
 				padding: @spacing-base;
 				text-decoration: none;
 				&:hover{
-					background: #fff;
-					color: #000;
+					text-decoration: underline;
 				}
 			}
 		}
-		&.right{
+		&--right{
 			float: right;
+		}
+	}
+	//modifiers
+	&--fixed{
+		background: #000;
+		.logo{
+			background: url(/images/logo--white.png) 15px no-repeat;
+			background-size: 67px;
+		}
+		li{
+			a{
+				color: #fff;
+				&:hover{
+					background: #fff;
+					color: #000;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }

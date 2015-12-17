@@ -16,12 +16,12 @@ define([
         var appRouter = new AppRouter();
         //home route
         appRouter.on('route:homepage', function() {
-            console.log(moltin);
-            new IndexView();
+            new IndexView(moltin);
         });
         //404 route
         appRouter.on('route:404', function(actions){
-            alert(actions);
+            //alert(actions);
+            console.log(actions);
         });
         Backbone.history.start();
     };
