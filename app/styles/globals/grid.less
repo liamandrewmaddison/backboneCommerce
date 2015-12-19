@@ -1,0 +1,11 @@
+@import '../mixins.less';
+.grid{
+	.clearfix();
+	&__item{
+		float: left;
+		&--2{
+			width: 50%;
+			padding: 0 @spacing-base;
+		}
+	}
+}
