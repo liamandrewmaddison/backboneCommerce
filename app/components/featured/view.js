@@ -20,9 +20,7 @@ define([
                 
                 for(var i = 0; i < productCount; i++){
                     featuredProd[i] = new FeaturedModel({ 
-                        id: i,
                         title: product[i].title,
-                        descr: product[i].description,
                         image: product[i].images[0].url.https,
                         price: product[i].price.data.formatted.without_tax,
                         link : product[i].title.split(' ').join('-').toLowerCase()

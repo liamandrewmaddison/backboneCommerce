@@ -12,8 +12,9 @@ require([
 	'app',
     //main views
     'header/view',
-    'footer/view'
-], function(moltin, App, HeaderView, FooterView){
+    'footer/view',
+    'basket/view'
+], function(moltin, App, HeaderView, FooterView, BasketView){
     'use strict';
     //initializing every main view
     new HeaderView();//render happens on init
@@ -22,6 +23,7 @@ require([
     moltin = new Moltin({ publicId: 'eXT0y3fLzXSoqSDW44AsA1y12CZKFEqELXWKN5IK' });
     moltin.Authenticate(function () {
     	//running app
+        new BasketView(moltin);
     	App.initialize(moltin);
     });
 });
