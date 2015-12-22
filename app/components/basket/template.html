@@ -1,3 +1,29 @@
 <script type="text/template">
-
+	<h2>Your Basket</h2>
+	<% if (rendered.length > 0){ %> 
+		<% _.each(rendered, function(basket) { %>
+			<div class="basket__item">
+				<div class="basket__image">
+					<img src="<%= basket.get('image') %>" />
+				</div>
+				<div class="basket__details">
+					<div class="basket__name"><%= basket.get('title') %></div>
+					<div class="basekt__size"><%= basket.get('size') %></div>
+					<div class="basket__quantity" data-id="<%= basket.get('id') %>">
+						<span class="increment">
+							<i class="plus icon"></i>
+						</span>
+						<span class="quantity"><%= basket.get('qty') %></span>
+						<span class="decrement">
+							<i class="minus icon"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		<% }); %>
+	<% }else { %>
+		<h3>EMPTY!!</h3>
+	<% } %>
+	<a class="ui button checkout">Checkout now</a>
+	<a class="ui button clear-basket">Clear</a>
 </script>

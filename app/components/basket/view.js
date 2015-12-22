@@ -2,7 +2,7 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'text!featured/template.html',
+    'text!basket/template.html',
     'basket/model',
     'basket/collection'
 ], function($, _, Backbone, Template, BasketModel, BasketCollection){
@@ -36,11 +36,11 @@ define([
                         link : products[i].title.split(' ').join('-').toLowerCase(),
                         size : products[i].modifiers[0].var_title
                     });
-                    console.log(products[i]);
                     basketArray.push(basketItem[i]);
                 }
-                var product = new BasketCollection(basketArray);
-                $this.render(product);
+                console.log(basketArray);
+                var basketView = new BasketCollection(basketArray);
+                $this.render(basketView);
             }, function(error) {
                 // Something went wrong...
             });

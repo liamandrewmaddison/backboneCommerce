@@ -1,14 +1,16 @@
 <script type="text/template">
 <h2>Featured</h2>
 <div class="grid">
-	<% _.each(rendered, function(helper) { %>
+	<% _.each(rendered, function(featured) { %>
 		<div class="grid__item grid__item--2">
 			<div class="product">
 				<div class="product__image">
-					<img src="<%= helper.get('image') %>"/>
+					<a href="#products/<%= featured.get('link') %>">
+						<img src="<%= featured.get('image') %>"/>
+					</a>
 				</div>
 				<div class="product__details">
-					<div class="product__name"><%= helper.get('title') %></div>
+					<div class="product__name"><%= featured.get('title') %></div>
 				</div>
 				<div class="product__shadow"></div>
 			</div>

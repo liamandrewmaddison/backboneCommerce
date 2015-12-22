@@ -14,6 +14,7 @@ define([
         fetchProducts: function(moltin){
             var $this = this;
             moltin.Product.List({category: 'featured'}, function(product) {
+                console.log(product);
                 var productCount = product.length,
                     featuredProd = {},
                     productArray = productArray || [];
