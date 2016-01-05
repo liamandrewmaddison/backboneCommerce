@@ -1,1 +1,19 @@
 @import '../../styles/mixins.less';
+.basket{
+	&--main{
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100%;
+		transform: translate3d(100%, 0, 0);
+		padding: @spacing-base;
+		transition: transform .25s ease;
+		background: #fff;
+		z-index: 1000;
+		width: 90%;
+		max-width: 320px;
+	}
+	&--active{
+		transform: translate3d(0,0,0);
+	}
+}

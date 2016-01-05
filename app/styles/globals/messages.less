@@ -1,0 +1,25 @@
+@import '../mixins.less';
+.message{
+	display: block;
+	padding: @spacing-base;
+	border: 1px solid;
+	border-radius: @radius-small;
+	&__body{
+		b{
+			display: block;
+		}
+	}
+	&__icon{
+		float: left;
+		font-size: @font-xxxl;
+		margin-right: @spacing-base;
+	}
+	&--warning{
+		color: @color-warning;
+		.message{
+			&__body{
+				//color: @color-text;
+			}
+		}
+	}
+}

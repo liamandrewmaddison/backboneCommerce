@@ -7,6 +7,7 @@ define([
     'basket/collection'
 ], function($, _, Backbone, Template, BasketModel, BasketCollection){
     'use strict';
+    var moltin;
     var BasketView = Backbone.View.extend({
         
         el: '.basket',
@@ -38,7 +39,6 @@ define([
                     });
                     basketArray.push(basketItem[i]);
                 }
-                console.log(basketArray);
                 var basketView = new BasketCollection(basketArray);
                 $this.render(basketView);
             }, function(error) {
@@ -46,7 +46,8 @@ define([
             });
         },
 
-        initialize: function(moltin){
+        initialize: function(Moltin){
+            moltin = Moltin;
             this.fetchBasket(moltin);
         },
 

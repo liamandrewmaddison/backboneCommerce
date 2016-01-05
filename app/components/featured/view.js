@@ -9,7 +9,7 @@ define([
     'use strict';
     var FeaturedView = Backbone.View.extend({
         
-        el: '.featured',
+        el: '.featured-container',
         
         fetchProducts: function(moltin){
             var $this = this;
@@ -28,7 +28,7 @@ define([
                     });
                     productArray.push(featuredProd[i]);
                 }
-                var featured = new FeaturedCollection( productArray );
+                var featured = new FeaturedCollection(productArray);
                 
                 $this.render(featured);
 

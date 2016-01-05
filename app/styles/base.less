@@ -7,6 +7,7 @@ body{
 	padding: 0;
 	margin: 0;
 	font-size: @font-base;
+	color: @color-text;
 	*{
 		box-sizing: border-box;
 	}
@@ -14,6 +15,7 @@ body{
 ul{
 	margin: 0;
 	padding: 0;
+	list-style-position: inside;
 }
 i{
 	&:first-child{
@@ -22,8 +24,9 @@ i{
 }
 h1,h2,h3,h4{
 	font-weight: 400;
-	margin-bottom: @spacing-base;
+	margin: @spacing-base 0;
 	text-transform: uppercase;
+	font-family: 'Montserrat';
 	&:first-child{
 		margin-top: 0;
 	}
@@ -36,3 +39,9 @@ h2{
 }
 h3{}
 h4{}
+
+.wrapper{
+	width: 75%;
+	margin: 0 auto;
+	padding: 60px 0;
+}

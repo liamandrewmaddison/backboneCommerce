@@ -18,6 +18,7 @@ define([
 
         render: function (moltin) {
             $(this.el).html(_.template(this.template));
+            $('html').addClass('menu-invisible');
             new FeaturedView(moltin);
         },
     });

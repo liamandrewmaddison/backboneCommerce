@@ -3,7 +3,8 @@ define([
     'underscore',
     'backbone',
     //router
-    'router'
+    'router',
+    'semantic'
 ], function($, _, Backbone, Router){
     'use strict';
     var initialize = function(moltin){

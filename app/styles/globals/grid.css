@@ -1,1 +1,1 @@
-.grid:after{content:'';display:block;clear:both}.grid__item{float:left}.grid__item--2{width:50%;padding:0 15px}
+.grid:after{content:'';display:block;clear:both}.grid__item{float:left;padding:0 15px}.grid__item--1{width:10%}.grid__item--2{width:20%}.grid__item--3{width:30%}.grid__item--4{width:40%}.grid__item--5{width:50%}.grid__item--6{width:60%}.grid__item--7{width:70%}.grid__item--8{width:80%}.grid__item--9{width:90%}.grid__item--10{width:100%}.grid--inbetween .grid__item{padding-left:15px}.grid--inbetween .grid__item:first-child{padding-left:0}

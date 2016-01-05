@@ -2,17 +2,17 @@
 <h2>Featured</h2>
 <div class="grid">
 	<% _.each(rendered, function(featured) { %>
-		<div class="grid__item grid__item--2">
-			<div class="product">
-				<div class="product__image">
+		<div class="grid__item grid__item--5">
+			<div class="featured">
+				<div class="featured__image">
 					<a href="#products/<%= featured.get('link') %>">
 						<img src="<%= featured.get('image') %>"/>
 					</a>
 				</div>
-				<div class="product__details">
-					<div class="product__name"><%= featured.get('title') %></div>
+				<div class="featured__details">
+					<div class="featured__name"><%= featured.get('title') %></div>
 				</div>
-				<div class="product__shadow"></div>
+				<div class="featured__shadow"></div>
 			</div>
 		</div>
 	<% }); %>

@@ -10,6 +10,15 @@ define([
         
         el: 'header',
 
+        events: {
+            'click .menu__basket' : 'showBasket'
+        },
+
+        showBasket: function(e){
+            e.preventDefault();
+            $('.basket--main').addClass('basket--active');
+        },
+
         initialize: function(){
             this.render();
         },
@@ -18,10 +27,13 @@ define([
             $(this.el).html(_.template(this.template));
             var $this = this;
             $(document).on('scroll', function(){
-                if($(document).scrollTop() > 0){
-                    $($this.el).addClass('menu--fixed');
-                }else{
-                    $($this.el).removeClass('menu--fixed');
+                if($('html').hasClass('menu-invisible')){
+                    $('html').removeClass('menu--fixed');
+                    if($(document).scrollTop() > 0){
+                        $($this.el).addClass('menu--fixed');
+                    }else{
+                        $($this.el).removeClass('menu--fixed');
+                    }
                 }
             });
         },

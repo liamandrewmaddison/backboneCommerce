@@ -1,3 +1,68 @@
 <script type="text/template">
-	<h3>PRODUCTS!</h3>
+    <div class="product">
+        <div class="grid">
+            <div class="grid__item grid__item--6">
+                <div class="product__image">
+                    <div class="product__image--main">
+                        <img src="<%= mainImgURL %>"/>
+                    </div>
+                    <div class="product__thumbs">
+                        <% _.each(thumbs, function(thumb){ %>
+                            <img class="thumb" src="<%= thumb.url.https %>"/>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__item grid__item--4">
+                <div class="product__details">
+                    <h2><%= title %></h2>
+                    <h4><%= price %></h4>
+                    <p><%= description %></p>
+                    <div class="product__variations">
+                        <% if (stockLevel == 0) { %>
+                            <div class="message message--warning">
+                                <div class="message__icon">
+                                    <i class="fa fa-warning"></i>
+                                </div>
+                                <div class="message__body">
+                                    <b>Sorry, we have run out!</b>
+                                    Please check back soon
+                                </div>
+                            </div>
+                        <% } else{%>
+                        <div class="ui two column grid row">
+                            <div class="column">
+                                <div class="ui fluid selection dropdown sizes">
+                                    <input type="hidden" name="sizes">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Sizes</div>
+                                    <div class="menu">
+                                        <% _.each(sizes, function(size){ %>
+                                            <div class="item" data-mod-key="<%= size.modifier %>" data-var-key="<%= size.id %>"><%= size.title %></div>
+                                        <% }); %>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="ui fluid selection dropdown quantity column">
+                                    <input type="hidden" name="quantity">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">Quantity</div>
+                                    <div class="menu">
+                                        <% _.each(stock, function(stock){ %>
+                                            <div class="item"><%= stock %></div>
+                                        <% }); %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="ui positive secondary button right floated add-to-basket">
+                            <i class="shop icon"></i>Add to basket
+                        </button>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </script>
